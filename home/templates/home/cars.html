@@ -1,0 +1,24 @@
+{% extends 'home/base.html' %}
+
+{% block title %}Cars{% endblock %}
+
+{% block content %}
+
+<div class='m-2 bg-gray-300 rounded-xl'>
+    <a class='m-3 text-blue-800 font-semibold'>Cars on Sale</a> 
+    <div class='m-2 grid grid-cols-6 gap-6'>
+        {% for car in cars %}
+            <a href='{% url "home:cardetail" car.id %}'>
+                <div class='mt-1'>
+                    <img src='{{ car.image1.url }}' class='rounded-t-xl'>
+                </div>
+                <div class='mb-1 rounded-b-xl bg-gray-100 p-2'>
+                    <h1>{{ car.name }}</h1>
+                    <p>Marked Price: {{ car.price }}</p>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

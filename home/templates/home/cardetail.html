@@ -1,0 +1,42 @@
+{% extends 'home/base.html' %}
+
+{% block title %}{{car.name}}{% endblock %}
+
+{% block content %}
+
+<div class='grid grid-cols-3 gap-2 inline-block inline-flex'>
+    <div class='m-2 bg-gray-300 col-span-2 rounded-xl inline-block'>
+        <div class='bg-gray-200 rounded-xl'>
+            <h1 class='p-2'><strong>{{car.name}}</strong></h1>
+        </div>
+        <div class='m-1 grid grid-cols-3 gap-3 inline-block'>
+            <div class='col-span-1'>
+                <img src='{{ car.image1.url }}' class='rounded-xl'>
+            </div>
+            <div class='col-span-1'>
+                <img src='{{ car.image2.url }}' class='rounded-xl'>
+            </div>
+            <div class='col-span-1'>
+                <img src='{{ car.image3.url }}' class='rounded-xl'>
+            </div>
+        </div>
+        <div class='m-1 grid grid-cols-3 gap-3'>
+            <div class='col-span-1'>
+                <img src='{{ car.image4.url }}' class='rounded-xl'>
+            </div>
+            <div class='col-span-1'>
+                <img src='{{ car.image5.url }}' class='rounded-xl'>
+            </div>
+            <div class='col-span-1'>
+                <img src='{{ car.image6.url }}' class='rounded-xl'>
+            </div>
+        </div>
+    </div>
+    <div class='m-2 bg-gray-300 col-span-1 rounded-xl inline-block'>
+        <h1 class='p-2 bg-gray-200 rounded-xl'>{{ car.description }}</h1>
+        <h1 class='p-2'>Marked Price: <strong>{{ car.price }}</strong></h1>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "home/base.html" %} 
+
+{% block title %}Videos{% endblock %}
+
+{% block content %}
+    <div class='grid grid-cols-3 gap-3 inline-block bg-gray-800 rounded-xl m-1 p-2'>
+        {% for video in videos %}
+            <div>
+                <video width="320" height="240" controls>
+                    <source src="{{ video.video.url }}" type="video/mp4" class='rounded-xl'>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        {% endfor %}
+    </div>
+    
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "home/base.html" %} 
+
+{% block title %}{{item.name}}{% endblock %}
+
+{% block content %}
+
+<div class='grid grid-cols-3 gap-2 inline-block inline-flex'>
+    <div class='m-2 bg-gray-300 col-span-2 rounded-xl inline-block'>
+        <div class='bg-gray-200 rounded-xl'>
+            <h1 class='p-2'><strong>{{item.name}}</strong></h1>
+        </div>
+        <div class='m-1 grid grid-cols-3 gap-3 inline-block'>
+            <div class='col-span-1'>
+                <img src='{{ item.image1.url }}' class='rounded-xl'>
+            </div>
+            <div class='col-span-1'>
+                <img src='{{ item.image2.url }}' class='rounded-xl'>
+            </div>
+            <div class='col-span-1'>
+                <img src='{{ item.image3.url }}' class='rounded-xl'>
+            </div>
+        </div>
+        <div class='m-1 grid grid-cols-3 gap-3'>
+            <div class='col-span-1'>
+                <img src='{{ item.image4.url }}' class='rounded-xl'>
+            </div>
+            <div class='col-span-1'>
+                <img src='{{ item.image5.url }}' class='rounded-xl'>
+            </div>
+            <div class='col-span-1'>
+                <img src='{{ item.image6.url }}' class='rounded-xl'>
+            </div>
+        </div>
+    </div>
+    <div class='m-2 bg-gray-300 col-span-1 rounded-xl inline-block'>
+        <h1 class='p-2 bg-gray-200 rounded-xl'>{{ item.description }}</h1>
+        <h1 class='p-2'>Rent/Price: <strong>{{ item.price }}</strong></h1>
+        <h1 class='p-2'>Location: <strong>{{ item.location }}</strong></h1>
+    </div>
+    <div class='bg-gray-800 rounded-xl m-1 p-2'>
+        <h1 class='text-orange-600'>Vitual house tour for {{item.name}}</h1>
+        <video width="320" height="240" controls>
+            <source src="{{ item.video.url }}" type="video/mp4" class='rounded-xl'>
+            Your browser does not support the video tag.
+        </video>
+
+    </div>
+
+</div>
+
+{% endblock %}

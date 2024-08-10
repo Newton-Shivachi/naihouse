@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width' initial-scale=1.0>
+        <script src='https://cdn.tailwindcss.com'></script>
+        <title>{% block title %}{% endblock %}Propeties</title>
+    </head>
+    <body>
+        <nav class='py-2 px-2 m-1 bg-gray-300 flex inline-block justify-between border-b border-gray-400 rounded-xl'>
+            <a href='/' class='text-blue-500 text-semibold text-3xl hover:text-blue-700'>Houses</a>
+            <a href='/' class='text-blue-500 text-semibold text-3xl hover:text-blue-700'>cars</a>
+            <div class='space-x-2'>
+                <form method="GET" action="{% url 'home:search' %}" style="display:inline;">
+                    <input type="text" name="query" value="{{ query }}" class='rounded-xl p-2' placeholder="Search houses and cars...">
+                    <button type="submit" class='bg-orange-300 rounded-xl p-2 hover:bg-orange-400'>Search</button>
+                </form>
+                <a href='{% url "home:houseforsale" %}' class='py-2 px-1 text-white bg-teal-500 hover:bg-teal-700 rounded-xl'>Houses ForSale</a>
+                <a href='{% url "home:houseforrent" %}' class='py-2 px-1 text-white bg-teal-500 hover:bg-teal-700 rounded-xl'>Houses ForRent</a>
+                <a href='{% url "home:cars" %}' class='py-2 px-3 text-white bg-teal-500 hover:bg-teal-700 rounded-xl'>Cars</a>
+                <a href='{% url "home:video" %}' class='py-2 px-3 text-white bg-teal-500 hover:bg-teal-700 rounded-xl'>videos</a>
+                
+            </div>
+        </nav>
+        
+        {% block content %}
+        {%endblock%}
+    </body>
+    <footer class='m-1 bg-blue-200 flex justify-between rounded-xl'>
+        <div class='w-1/2 pr-5'>
+            <h1 class='px-3 mb-2 font-semibold'>About</h1>
+            <p class='px-3 mb-2'>This site ease the search for both Houses and cars for sale. I believe it's more appealing to have a variety of products for a client to choose from. The site development is aspired not only to ease the search for products but also to avail as many products to maximize clients satisfaction.</p>
+        </div>
+        <div class='w-1/2'>
+            <ul>
+                <li><a class='mb-2 font-semibold'>Contact</a></li>
+                <li><a class=''>email: <strong>newtonatika@gmail.com</strong></a></li>
+                <li><a class=''>phone number: <strong>0745770557 / 0741532802</strong></a></li>
+                <li><a class=''>whatsapp number: <strong>0745770557</strong></a></li>
+                <li><a href='#' class='text-blue-500 hover:text-blue-700'>help</strong></a></li>
+            </ul>
+        </div>
+    </footer>
+</html>
