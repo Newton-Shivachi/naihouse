@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-zqh6_lc$_y@tb4@lf9@)&$e-q&vl267ocxy31h7ph1t+88)csy
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['naihouse.onrender.com']
 
 
 # Application definition
