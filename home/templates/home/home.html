@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class='inline-grid'>
-    <div class='text-center p-2 m-1 bg-gray-200 rounded-xl'>
+    <div class='text-center bg-gray-200 rounded-xl'>
         <div class='border-b border-gray-600 m-1'>
             <div>
                 <a href='{% url "home:houseforsale" %}' class='p-1 m-1 text-blue-800 font-semibold bg-orange-300 rounded-xl hover:bg-orange-400'>Houses available for sale</a>
@@ -27,7 +27,7 @@
             <div>
                 <a href='{% url "home:houseforrent" %}' class='p-1 m-1 text-blue-800 font-semibold bg-orange-300 rounded-xl hover:bg-orange-400'>Houses available for Rent</a>
             </div> 
-            <div class='m-1 bg-gray-300 rounded-xl p-1 grid grid-cols-6 gap-6 border-b border-gray-600'>
+            <div class='m-1 bg-gray-300 rounded-xl p-1 grid grid-cols-2 gap-1 border-b border-gray-600'>
                 {% for rental in rentals %}
                     <a href='{% url "home:detail" rental.id %}'>
                         <div>
@@ -45,7 +45,7 @@
             <div>
                 <a href='{% url "home:cars" %}' class='p-1 m-1 text-blue-800 font-semibold bg-orange-300 rounded-xl hover:bg-orange-400'>Cars on Sale</a>
             </div>     
-            <div class='m-1 bg-gray-300 rounded-xl p-1 grid grid-cols-6 gap-6 border-b border-gray-600'>
+            <div class='m-1 bg-gray-300 rounded-xl p-1 grid grid-cols-2 gap-2 border-b border-gray-600'>
                 {% for car in cars %}
                     <a href="{% url 'home:cardetail' car.id %}" class='col-span-1'>
                         <div>
