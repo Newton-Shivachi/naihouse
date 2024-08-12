@@ -13,7 +13,7 @@
                 {% for house in houses %}
                     <a href='{% url "home:detail" house.id %}'>
                         <div class='mt-1'>
-                            <img src='{{ house.image1.url }}' class='rounded-t-xl'>
+                            <img src='{{ house.image1.url }}' alt="{{ house.name }}" class='rounded-t-xl'>
                         </div>
                         <div class='mb-1 rounded-b-xl bg-gray-100 p-2'>
                             <h1>{{ house.name }}</h1>
@@ -31,7 +31,7 @@
                 {% for rental in rentals %}
                     <a href='{% url "home:detail" rental.id %}'>
                         <div>
-                            <img src='{{ rental.image1.url }}' class='rounded-t-xl' width="384" height="512">
+                            <img src='{{ rental.image1.url }}' alt="{{ house.name }}" class='rounded-t-xl' width="384" height="512">
                         </div>
                         <div class='mb-1 rounded-b-xl bg-gray-100 p-2'>
                             <h1>{{ rental.name }}</h1>
@@ -49,7 +49,7 @@
                 {% for car in cars %}
                     <a href="{% url 'home:cardetail' car.id %}" class='col-span-1'>
                         <div>
-                            <img src='{{ car.image1.url }}' class='rounded-t-xl' width="512" height="512">
+                            <img src='{{ car.image1.url }}' alt="{{ house.name }}" class='rounded-t-xl' width="512" height="512">
                         </div>
                         <div class='mb-1 rounded-b-xl bg-gray-100 p-2'>
                             <h1>{{ car.name }}</h1>
