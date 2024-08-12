@@ -27,7 +27,7 @@ class Houses(models.Model):
     description = models.TextField(null=False)
     price = models.FloatField()
     location = models.CharField(max_length=255)
-    video = models.FileField(upload_to='video/',blank=False)
+    video = video = CloudinaryField('video', resource_type='video')
     forsales = models.BooleanField(default=False)
     
     class Meta:
