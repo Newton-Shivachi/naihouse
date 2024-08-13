@@ -11,17 +11,17 @@
             <a href='/' class='text-blue-500 text-semibold text-3xl hover:text-blue-700'>Houses</a>
             <a href='{% url "home:cars" %}' class='text-blue-500 text-semibold text-3xl hover:text-blue-700'>cars</a>
         </nav>
-        <nav>
+        <nav class='py-2 px-2 m-1 bg-gray-300 flex inline-block justify-between border-b border-gray-400 rounded-xl'>
             <form method="GET" action="{% url 'home:search' %}" style="display:inline;">
                 <input type="text" name="query" value="{{ query }}" class='rounded-xl p-2' placeholder="Search houses and cars...">
                 <button type="submit" class='bg-orange-300 rounded-xl p-2 hover:bg-orange-400'>Search</button>
             </form>
         </nav>  
-        <nav>
+        <nav class='py-2 px-2 m-1 bg-gray-300 flex inline-block justify-between border-b border-gray-400 rounded-xl'>
             <a href='{% url "home:houseforsale" %}' class='py-2 px-1 text-white bg-teal-500 hover:bg-teal-700 rounded-xl'>Houses ForSale</a>
             <a href='{% url "home:houseforrent" %}' class='py-2 px-1 text-white bg-teal-500 hover:bg-teal-700 rounded-xl'>Houses ForRent</a>
         </nav>
-        <nav>   
+        <nav class='py-2 px-2 m-1 bg-gray-300 flex inline-block justify-between border-b border-gray-400 rounded-xl'>   
             <a href='{% url "home:cars" %}' class='py-2 px-3 text-white bg-teal-500 hover:bg-teal-700 rounded-xl'>Cars</a>
             <a href='{% url "home:video" %}' class='py-2 px-3 text-white bg-teal-500 hover:bg-teal-700 rounded-xl'>videos</a>
         </nav>          
