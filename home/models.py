@@ -10,7 +10,7 @@ class Car(models.Model):
     image5=CloudinaryField('image')
     image6=CloudinaryField('image')
     description = models.TextField(null=False)
-    price = models.FloatField()
+    price = models.CharField(max_length=255)
     is_sold = models.BooleanField(default=False)
     
     def __str__(self):
