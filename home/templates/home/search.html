@@ -26,19 +26,21 @@
         </div>
     </ul>
     <ul>
-        <div class='grid grid-cols-2 gap-1'>
+        <div class='grid grid-cols-2 gap-1 bg-gray-300 rounded-xl'>
             {% for car in cars %}
-                <a href='{% url "home:cardetail" car.id'>
-                    <div class='mr-1 ml-1 p-2 rounded-b-xl bg-gray-200'>
-                        <div>
-                            <img src="{{ car.image1.url }}" class='rounded-t-xl' width="384" height="512" alt="{{ car.name }}">
-                        </div>
-                        <div class='bg-gray-100 rounded-b-xl'>
-                            <h3>Name: {{ car.name }}</h3>
-                            <p class='font-semibold'>KSH {{ car.price }}</p>
-                        </div>
+                <li>
+                    <div class='m-1 p-2 rounded-b-xl bg-gray-200 rounded-xl'>
+                        <a href='{% url "home:cardetail" car.id %}'>
+                            <div>
+                                <img src="{{ item.image1.url }}" class='rounded-t-xl' alt="{{ item.name }}">
+                            </div>
+                            <div class='bg-gray-100 rounded-b-xl'>
+                                <h3>Name: {{ car.name }}</h3>
+                                <p>Rent/Price:<strong> KSH {{ car.price }}</strong></p>
+                            </div>
+                        </a>
                     </div>
-                </a>
+                </li>
             {% endfor %}
         </div>
     </ul>
