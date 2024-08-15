@@ -32,7 +32,7 @@
                     <div class='m-1 p-2 rounded-b-xl bg-gray-200 rounded-xl'>
                         <a href='{% url "home:cardetail" car.id %}'>
                             <div>
-                                <img src="{{ item.image1.url }}" class='rounded-t-xl' alt="{{ item.name }}">
+                                <img src="{{ car.image1.url }}" class='rounded-t-xl' alt="{{ item.name }}">
                             </div>
                             <div class='bg-gray-100 rounded-b-xl'>
                                 <h3>Name: {{ car.name }}</h3>
